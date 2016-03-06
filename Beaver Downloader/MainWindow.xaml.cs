@@ -21,7 +21,7 @@ namespace Beaver_Downloader
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ObservableCollection<DownloadItem> downloadItems = new ObservableCollection<DownloadItem> { };
+        public ObservableCollection<DownloadItem> downloadItems = new ObservableCollection<DownloadItem> { };
 
         public MainWindow()
         {
@@ -33,9 +33,8 @@ namespace Beaver_Downloader
         private void downloadButton_Click(object sender, RoutedEventArgs e)
         {
             string url = urlBox.Text;
-            int progress = 0;
 
-            DownloadItem item = new DownloadItem(url, progress);
+            DownloadItem item = new DownloadItem(url);
 
             downloadItems.Add(item);
         }

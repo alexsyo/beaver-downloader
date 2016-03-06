@@ -11,7 +11,7 @@ namespace Beaver_Downloader
         public string url { get; private set; }
         public int progress { get; set; }
 
-        public DownloadItem(string url, int progress)
+        public DownloadItem(string url, int progress = 0)
         {
             this.url = url;
             this.progress = progress;
