@@ -1,0 +1,41 @@
+﻿<Window x:Class="Beaver_Downloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Beaver_Downloader"
+        mc:Ignorable="d"
+        Title="Beaver Downloader" Height="524.034" Width="1000">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ResourceDictionaries/Menu.xaml" />
+                <ResourceDictionary Source="ResourceDictionaries/Search.xaml" />
+                <ResourceDictionary Source="ResourceDictionaries/List.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Menu x:Name="menu">
+            <MenuItem Header="File">
+                <MenuItem></MenuItem>
+            </MenuItem>
+        </Menu>
+        <TextBox x:Name="urlBox" Text="https://" />
+        <Button x:Name="downloadButton" Content="Download" Click="downloadButton_Click" />
+        <ListBox x:Name="downloadList">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding url}" />
+                        <ProgressBar Grid.Column="1" Value="{Binding progress}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>
