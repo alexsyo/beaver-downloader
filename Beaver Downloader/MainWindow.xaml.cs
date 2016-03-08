@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace Beaver_Downloader
 {
@@ -21,22 +22,22 @@ namespace Beaver_Downloader
     /// </summary>
     public partial class MainWindow : Window
     {
-        public ObservableCollection<DownloadItem> downloadItems = new ObservableCollection<DownloadItem> { };
-
         public MainWindow()
         {
             InitializeComponent();
-
-            downloadList.ItemsSource = downloadItems;
         }
 
         private void downloadButton_Click(object sender, RoutedEventArgs e)
         {
             string url = urlBox.Text;
+            string path = "D:/code/github/Beaver Downloader/Beaver Downloader/Data/Files.xml";
 
-            DownloadItem item = new DownloadItem(url);
-
-            downloadItems.Add(item);
+            XElement xml = XElement.Load(path);
+            xml.Add(new XElement("File",
+                new XElement("Url", url),
+                new XElement("Progress", 0)
+            ));
+            xml.Save(path);
         }
     }
 }

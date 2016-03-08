@@ -24,6 +24,13 @@
         <TextBox x:Name="urlBox" Text="https://" />
         <Button x:Name="downloadButton" Content="Download" Click="downloadButton_Click" />
         <ListBox x:Name="downloadList">
+            <ListBox.Resources>
+                <XmlDataProvider x:Key="Files" Source="Data/Files.xml" XPath="Files"/>
+            </ListBox.Resources>
+            <ListBox.ItemsSource>
+                <Binding Source="{StaticResource Files}"
+                         XPath="*"/>
+            </ListBox.ItemsSource>
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -31,8 +38,16 @@
                             <ColumnDefinition Width="200" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="{Binding url}" />
-                        <ProgressBar Grid.Column="1" Value="{Binding progress}" />
+                        <TextBlock Grid.Column="0">
+                            <TextBlock.Text>
+                                <Binding XPath="Url" />
+                            </TextBlock.Text>
+                        </TextBlock>
+                        <ProgressBar Grid.Column="1">
+                            <ProgressBar.Value>
+                                <Binding XPath="Progress" />
+                            </ProgressBar.Value>
+                        </ProgressBar>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
