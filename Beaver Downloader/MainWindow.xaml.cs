@@ -36,6 +36,7 @@ namespace Beaver_Downloader
             string url = urlBox.Text;
 
             xmlData.AddRow(url);
+            FileObject.Download(url);
         }
     }
 }

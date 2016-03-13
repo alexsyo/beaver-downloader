@@ -7,39 +7,46 @@
         mc:Ignorable="d"
         Title="Beaver Downloader" Height="524.034" Width="1000">
     <DockPanel>
+
         <Menu x:Name="menu">
+            
             <MenuItem Header="File">
                 <MenuItem></MenuItem>
             </MenuItem>
+            
         </Menu>
+
         <Grid Style="{StaticResource SearchBox}">
+            
             <TextBox x:Name="urlBox" Text="https://" />
             <Button x:Name="downloadButton" Content="Download" Click="downloadButton_Click" />
+            
         </Grid>
+
         <ListBox x:Name="downloadList" ItemsSource="{Binding}">
+
             <ListBox.DataContext>
                 <XmlDataProvider x:Name="FilesProvider" XPath="Files/File"/>
             </ListBox.DataContext>
+
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
+
                         <Grid.ColumnDefinitions>
+
                             <ColumnDefinition Width="200" />
                             <ColumnDefinition Width="*" />
+
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0">
-                            <TextBlock.Text>
-                                <Binding XPath="Url" />
-                            </TextBlock.Text>
-                        </TextBlock>
-                        <ProgressBar Grid.Column="1">
-                            <ProgressBar.Value>
-                                <Binding XPath="Progress" />
-                            </ProgressBar.Value>
-                        </ProgressBar>
+
+                        <TextBlock Grid.Column="0" Text="{Binding XPath=Url}" />
+                        <ProgressBar Grid.Column="1" Value="{Binding XPath=Progress}" />
+
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+
     </DockPanel>
 </Window>

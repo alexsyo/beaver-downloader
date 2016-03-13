@@ -22,8 +22,8 @@ namespace Beaver_Downloader
         public void setPath(XmlDataProvider provider)
         {
             xmlFile = provider;
-            string directoryPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Beaver Downloader";
-            path = directoryPath + "\\Files.xml";
+            string directoryPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Beaver Downloader\\";
+            path = directoryPath + "Files.xml";
 
             if(!Directory.Exists(directoryPath))
             {
