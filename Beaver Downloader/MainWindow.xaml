@@ -6,31 +6,20 @@
         xmlns:local="clr-namespace:Beaver_Downloader"
         mc:Ignorable="d"
         Title="Beaver Downloader" Height="524.034" Width="1000">
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="ResourceDictionaries/Menu.xaml" />
-                <ResourceDictionary Source="ResourceDictionaries/Search.xaml" />
-                <ResourceDictionary Source="ResourceDictionaries/List.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
-    <Grid>
+    <DockPanel>
         <Menu x:Name="menu">
             <MenuItem Header="File">
                 <MenuItem></MenuItem>
             </MenuItem>
         </Menu>
-        <TextBox x:Name="urlBox" Text="https://" />
-        <Button x:Name="downloadButton" Content="Download" Click="downloadButton_Click" />
-        <ListBox x:Name="downloadList">
-            <ListBox.Resources>
-                <XmlDataProvider x:Key="Files" Source="Data/Files.xml" XPath="Files"/>
-            </ListBox.Resources>
-            <ListBox.ItemsSource>
-                <Binding Source="{StaticResource Files}"
-                         XPath="*"/>
-            </ListBox.ItemsSource>
+        <Grid Style="{StaticResource SearchBox}">
+            <TextBox x:Name="urlBox" Text="https://" />
+            <Button x:Name="downloadButton" Content="Download" Click="downloadButton_Click" />
+        </Grid>
+        <ListBox x:Name="downloadList" ItemsSource="{Binding}">
+            <ListBox.DataContext>
+                <XmlDataProvider x:Name="FilesProvider" XPath="Files/File"/>
+            </ListBox.DataContext>
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -52,5 +41,5 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-    </Grid>
+    </DockPanel>
 </Window>
