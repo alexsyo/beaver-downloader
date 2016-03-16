@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>30</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>File
+--
+- url: sring
+- status: bool
+- currentByte: int
+- totalBytes: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>280</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Interface
+--
+- queue: Queue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>40</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Queue
+--
+- files: List&lt;File&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>60</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1
+&lt; Includes
+</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>100</y>
+      <w>230</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+Manage &gt;</panel_attributes>
+    <additional_attributes>10.0;220.0;210.0;220.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>110</x>
+      <y>120</y>
+      <w>90</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1
+&lt; Create
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+</diagram>

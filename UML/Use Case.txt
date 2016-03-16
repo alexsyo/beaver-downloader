@@ -1,0 +1,58 @@
+Description:
+
+- When a Url is inserted a defalut path is set with the file name. 
+- The path can be Changed.
+- The Url is added to a queue to be downloaded.
+- Downloads in the queue can be started, paused and resumed.
+- Progress displayed.
+
+Triggres:
+
+- Write Url.
+- Change path.
+- Add to queue.
+- Download.
+- Pause.
+- Resume.
+- Start.
+
+Actors:
+
+- Interface.
+- Queue.
+- File.
+
+Preconditions:
+
+- A link is available.
+- A persistent queue is available.
+
+Goals:
+
+- Download multiple files.
+- Pause.
+- Resume.
+- Remove.
+
+Failed:
+
+- Connection down.
+
+Extension:
+
+- Restore status on start.
+- automatically start when added to queue.
+
+Steps:
+
+1.0	- Write Url.
+2.0	- Default path is set.
+2.1	- Change path.
+3.0	- Add to queue.
+4.0	- Start Download.
+4.1	- Display progress.
+4.2	- Connection down.
+5.0 - Pause.
+6.0	- Resume.
+7.0	- Remove.
+8.0	- Restore status on start.
