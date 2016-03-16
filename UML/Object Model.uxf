@@ -70,7 +70,7 @@ m2=1
     <panel_attributes>lt=-
 m1=1
 m2=1
-Manage &gt;</panel_attributes>
+Manages &gt;</panel_attributes>
     <additional_attributes>10.0;220.0;210.0;220.0;210.0;10.0</additional_attributes>
   </element>
   <element>
@@ -84,7 +84,7 @@ Manage &gt;</panel_attributes>
     <panel_attributes>lt=-
 m1=0..n
 m2=1
-&lt; Create
+&lt; Creates
 </panel_attributes>
     <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
   </element>

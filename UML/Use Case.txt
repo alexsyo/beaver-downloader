@@ -24,7 +24,6 @@ Actors:
 
 Preconditions:
 
-- A link is available.
 - A persistent queue is available.
 
 Goals:
