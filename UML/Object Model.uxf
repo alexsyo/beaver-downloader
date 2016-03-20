@@ -7,11 +7,13 @@
       <x>20</x>
       <y>30</y>
       <w>210</w>
-      <h>100</h>
+      <h>130</h>
     </coordinates>
     <panel_attributes>File
 --
+- id: int
 - url: sring
+- path: string
 - status: bool
 - currentByte: int
 - totalBytes: int</panel_attributes>
@@ -77,15 +79,15 @@ Manages &gt;</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>110</x>
-      <y>120</y>
+      <y>150</y>
       <w>90</w>
-      <h>180</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..n
 m2=1
 &lt; Creates
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
   </element>
 </diagram>
