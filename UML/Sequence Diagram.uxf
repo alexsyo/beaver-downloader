@@ -125,7 +125,7 @@ bg=yellow</panel_attributes>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-GetFileName(string url):string</panel_attributes>
+&lt;&lt;static&gt;&gt; GetFileName(string url):string</panel_attributes>
     <additional_attributes>390.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>

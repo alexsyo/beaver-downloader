@@ -40,7 +40,7 @@
 - currentByte: int
 - totalBytes: int
 --
-+ GetFileName(url:string):string
+# GetFileName(url:string):string
 + Download():void
 + Pause():void
 
