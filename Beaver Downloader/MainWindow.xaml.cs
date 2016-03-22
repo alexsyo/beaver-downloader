@@ -33,10 +33,10 @@ namespace Beaver_Downloader
 
         private void downloadButton_Click(object sender, RoutedEventArgs e)
         {
-            string url = urlBox.Text;
+            //string url = urlBox.Text;
 
-            xmlData.AddRow(url);
-            FileObject.Download(url);
+            //xmlData.AddRow(url);
+            //FileObject.Download(url);
         }
     }
 }
