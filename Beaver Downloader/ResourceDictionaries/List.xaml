@@ -11,7 +11,7 @@
 
     <Style TargetType="ProgressBar">
         <Setter Property="Minimum" Value="0" />
-        <Setter Property="Maximum" Value="100" />
+        <Setter Property="Maximum" Value="{Binding XPath=TotalBytes}" />
         <Setter Property="Margin" Value="20,0,0,0" />
     </Style>
 </ResourceDictionary>

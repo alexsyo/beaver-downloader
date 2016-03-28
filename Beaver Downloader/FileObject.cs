@@ -30,7 +30,13 @@ namespace Beaver_Downloader
 
         public static string GetFileName(string url)
         {
-            throw new NotImplementedException();
+            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(url);
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+            string fileHeader = response.Headers["Content-Disposition"];
+            string fileName = Regex.Match(fileHeader, "(?<=\\\").*(?=\\\")").Value;
+
+            return fileName;
         }
 
         public void Download()
@@ -43,24 +49,24 @@ namespace Beaver_Downloader
             throw new NotImplementedException();
         }
 
-        ///// <summary>
-        ///// Download a new file
-        ///// </summary>
-        ///// <param name="url"></param>
-        //public static void Download(string url)
-        //{
-        //    string directoryPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads\\";
+        /// <summary>
+        /// Download a new file
+        /// </summary>
+        /// <param name="url"></param>
+        public static void Download(string url)
+        {
+            string directoryPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads\\";
 
-        //    HttpWebRequest request = (HttpWebRequest) HttpWebRequest.Create(url);
-        //    HttpWebResponse response = (HttpWebResponse) request.GetResponse();
+            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(url);
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
-        //    string fileHeader = response.Headers["Content-Disposition"];
-        //    string fileName = Regex.Match(fileHeader, "(?<=\\\").*(?=\\\")").Value;
-        //    string filePath = directoryPath + fileName;
+            string fileHeader = response.Headers["Content-Disposition"];
+            string fileName = Regex.Match(fileHeader, "(?<=\\\").*(?=\\\")").Value;
+            string filePath = directoryPath + fileName;
 
-        //    // todo: write to file
-        //    // todo: update progress
-        //    // todo: replace url with filename in the listbox
-        //}
+            // todo: write to file
+            // todo: update progress
+            // todo: replace url with filename in the listbox
+        }
     }
 }

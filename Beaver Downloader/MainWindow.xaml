@@ -19,7 +19,7 @@
         <Grid Style="{StaticResource SearchBox}">
             
             <TextBox x:Name="urlBox" Text="https://" />
-            <Button x:Name="downloadButton" Content="Download" Click="downloadButton_Click" />
+            <Button x:Name="addRowButton" Content="Add" Click="addRowButton_Click" />
             
         </Grid>
 
@@ -37,11 +37,15 @@
 
                             <ColumnDefinition Width="200" />
                             <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="80" />
 
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock Grid.Column="0" Text="{Binding XPath=Url}" />
-                        <ProgressBar Grid.Column="1" Value="{Binding XPath=Progress}" />
+                        <Label Grid.Column="0" Content="{Binding XPath=Name}" />
+                        <ProgressBar Grid.Column="1" Value="{Binding XPath=CurrentByte}" />
+                        <Button Grid.Column="2" x:Name="startButton" Tag="{Binding XPath=@id}" Click="startButton_Click">Start</Button>
+                        <Button Grid.Column="3" x:Name="removeButton" Tag="{Binding XPath=@id}" Click="removeButton_Click">Remove</Button>
 
                     </Grid>
                 </DataTemplate>

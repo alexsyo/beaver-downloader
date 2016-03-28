@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beaver Downloader", "Beaver Downloader\Beaver Downloader.csproj", "{0AA803F5-B8C8-4BAC-99B2-DA69BB7434D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beaver DownloaderTests", "Beaver DownloaderTests\Beaver DownloaderTests.csproj", "{9BC7E8AB-1592-4581-90C3-348F7E4F1FAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beaver DownloaderTests", "Beaver DownloaderTests\Beaver DownloaderTests.csproj", "{420AF1C9-AC11-46EB-8210-450E985A1D52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{0AA803F5-B8C8-4BAC-99B2-DA69BB7434D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AA803F5-B8C8-4BAC-99B2-DA69BB7434D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AA803F5-B8C8-4BAC-99B2-DA69BB7434D5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9BC7E8AB-1592-4581-90C3-348F7E4F1FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BC7E8AB-1592-4581-90C3-348F7E4F1FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BC7E8AB-1592-4581-90C3-348F7E4F1FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BC7E8AB-1592-4581-90C3-348F7E4F1FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{420AF1C9-AC11-46EB-8210-450E985A1D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{420AF1C9-AC11-46EB-8210-450E985A1D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{420AF1C9-AC11-46EB-8210-450E985A1D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{420AF1C9-AC11-46EB-8210-450E985A1D52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
