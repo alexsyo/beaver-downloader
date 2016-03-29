@@ -32,9 +32,7 @@ namespace Beaver_Downloader
         {
             InitializeComponent();
 
-            xmlData = new XmlData();
-            xmlData.setPath(FilesProvider);
-
+            xmlData = new XmlData(FilesProvider);
             downloader = new Downloader(new HttpClient(), xmlData);
         }
 
@@ -63,21 +61,12 @@ namespace Beaver_Downloader
             xmlData.AddRow(url, dir, fileName, 0, size);
         }
 
-        private void removeButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Get the File Id
-            string id = GetFileId(sender);
-
-            // Remove the node from the xml file
-            xmlData.removeRow(id);
-        }
-
         private async void startButton_Click(object sender, RoutedEventArgs e)
         {
             // Get the file Id
             string id = GetFileId(sender);
 
-            // Start the Download
+            // Start to download the file
             try
             {
                 await downloader.GetFile(id);
@@ -87,6 +76,15 @@ namespace Beaver_Downloader
                 MessageBox.Show(ex.Message);
                 return;
             }
+        }
+
+        private void removeButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Get the File Id
+            string id = GetFileId(sender);
+
+            // Remove the node from the xml file
+            xmlData.RemoveRow(id);
         }
 
         /// <summary>

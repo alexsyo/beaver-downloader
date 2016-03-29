@@ -56,8 +56,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Downloader.cs" />
-    <Compile Include="FileObject.cs" />
-    <Compile Include="IDownloader.cs" />
     <Compile Include="XmlData.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
