@@ -7,11 +7,21 @@
         <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="VerticalAlignment" Value="Stretch" />
         <Setter Property="Margin" Value="10,0,10,10" />
+        <Setter Property="Background" Value="#FF292929" />
+        <Setter Property="Foreground" Value="#FFE2E2E2" />
+        <Setter Property="BorderBrush" Value="#FF707070" />
+    </Style>
+
+    <Style TargetType="Label">
+        <Setter Property="Foreground" Value="#FFE2E2E2" />
     </Style>
 
     <Style TargetType="ProgressBar">
         <Setter Property="Minimum" Value="0" />
         <Setter Property="Maximum" Value="{Binding XPath=TotalBytes}" />
         <Setter Property="Margin" Value="20,0,0,0" />
+        <Setter Property="Background" Value="#FF444444" />
+        <Setter Property="Foreground" Value="#FF0061CB" />
+        <Setter Property="BorderBrush" Value="#FF707070" />
     </Style>
 </ResourceDictionary>

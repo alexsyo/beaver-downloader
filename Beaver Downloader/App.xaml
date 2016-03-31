@@ -6,9 +6,11 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ResourceDictionaries/Window.xaml" />
                 <ResourceDictionary Source="ResourceDictionaries/Menu.xaml" />
                 <ResourceDictionary Source="ResourceDictionaries/Search.xaml" />
                 <ResourceDictionary Source="ResourceDictionaries/List.xaml" />
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>    </Application.Resources>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

@@ -12,6 +12,9 @@
         <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Width" Value="auto" />
+        <Setter Property="Background" Value="#FF707070" />
+        <Setter Property="Foreground" Value="#FFE2E2E2" />
+        <Setter Property="BorderBrush" Value="#FF707070" />
     </Style>
 
     <Style TargetType="Button">
@@ -19,6 +22,15 @@
         <Setter Property="VerticalAlignment" Value="Top" />
         <Setter Property="Height" Value="30" />
         <Setter Property="Width" Value="75" />
+        <Setter Property="Background" Value="#FF292929" />
+        <Setter Property="Foreground" Value="#FFE2E2E2" />
+        <Setter Property="BorderBrush" Value="#FF707070" />
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" Value="#FFE2E2E2" />
+                <Setter Property="Foreground" Value="#FF292929" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
     
 </ResourceDictionary>

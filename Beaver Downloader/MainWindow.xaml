@@ -5,22 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Beaver_Downloader"
         mc:Ignorable="d"
-        Title="Beaver Downloader" Height="524.034" Width="1000">
+        Title="Beaver Downloader" Height="524.034" Width="1000"
+        Style="{StaticResource MainWindow}">
     <DockPanel>
 
         <Menu x:Name="menu">
-            
+
             <MenuItem Header="File">
                 <MenuItem></MenuItem>
             </MenuItem>
-            
+
         </Menu>
 
         <Grid Style="{StaticResource SearchBox}">
-            
+
             <TextBox x:Name="urlBox" Text="https://" />
             <Button x:Name="addRowButton" Content="Add" Click="addRowButton_Click" />
-            
+
         </Grid>
 
         <ListBox x:Name="downloadList" ItemsSource="{Binding}">

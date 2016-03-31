@@ -1,0 +1,7 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Beaver_Downloader.ResourceDictionaries">
+    <Style TargetType="Window" x:Key="MainWindow">
+        <Setter Property="Background"  Value="#FF444444" />
+    </Style>
+</ResourceDictionary>
